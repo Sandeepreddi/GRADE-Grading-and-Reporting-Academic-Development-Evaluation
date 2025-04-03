@@ -1,0 +1,116 @@
+.signup_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    background-color: aliceblue;
+    padding: 40px 0;
+  }
+  
+  .signup_img img {
+    width: 420px;
+    height: 450px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  .signup_form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+  
+  .signup_form img {
+    margin: 0px auto 0px;
+    width: 250px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  
+  .signup_form h3 {
+    margin: 10px 0;
+    font-size: 30px;
+    color: #21444c;
+    align-self:center;
+  }
+  
+  .signup_form label {
+    margin-bottom: 5px;
+    font-size: 20px;
+    align-self: flex-start;
+    width: 100%;
+    text-align: left;
+    color: #21444c;
+  }
+  
+  .signup_form input {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 89%;
+    border: 1px solid #ddd;
+  }
+  
+  .signup_form button {
+    padding: 12px 25px;
+    color: white;
+    background-color: #21444c;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .signup_form select {
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 94%;
+    border: 1px solid #ddd;
+  }
+  
+  .column {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .column a {
+    color: #21444c;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Password container styles */
+  .password-container {
+    position: relative;
+    width: 90%;
+  }
+  
+  .password-container input {
+    width: 90%;
+    padding-right: 40px;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #21444c;
+    font-size: 18px;
+  }

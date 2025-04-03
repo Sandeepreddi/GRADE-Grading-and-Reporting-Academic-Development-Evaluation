@@ -1,0 +1,65 @@
+/* Container styling */
+.body-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact list */
+  .contact-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Individual contact items */
+  .contact-item {
+    background: white;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .contact-item:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Contact details */
+  .contact-name {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .contact-phone {
+    color: #555;
+  }
+  
+  /* No contacts available */
+  .no-contacts {
+    font-size: 16px;
+    color: #888;
+  }
+  
