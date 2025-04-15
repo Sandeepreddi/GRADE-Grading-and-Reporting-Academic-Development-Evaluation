@@ -66,6 +66,7 @@ const EventsList = () => {
   return (
     <div className="events-container">
       <h2 className="events-title">Event List</h2>
+      {events.length > 0 ? (
       <div className="events-grid">
         {events.map((event) => (
           <div
@@ -81,6 +82,9 @@ const EventsList = () => {
           </div>
         ))}
       </div>
+      ) : (
+        <p className="no-notices">No Events Yet</p>
+      )}
 
       {selectedEvent && (
         <div className="event-card">

@@ -1,0 +1,141 @@
+.create-post-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+  }
+  
+  .post-form input,
+  .post-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .post-form button {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .post-form button:first-of-type {
+    background-color: green;
+    color: white;
+  }
+  
+  .post-form button:last-of-type {
+    background-color: red;
+    color: white;
+  }
+
+  .admin-posts-body {
+    align-items: center;
+    color: #333;
+    }
+    
+    .admin-posts-body h4 {
+      margin: 0;
+      padding: 0;
+      
+    font-size: 22px;
+    }
+
+    .admin-posts-body-h4 {
+      align-items: center;
+      color: #333;
+      font-size: 22px;
+      margin-bottom: 10px;
+      padding: 10px;
+      
+    }
+
+    .admin-posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    
+    .post-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+    
+    .post-card:hover {
+      transform: translateY(-4px);
+    }
+    
+    .post-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .post-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .delete-icon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 6px;
+      font-size: 1.2rem;
+      color: #ff4d4d;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    
+    .delete-icon:hover {
+      background: #ffecec;
+    }
+    
+    .post-content {
+      padding: 1rem;
+    }
+    
+    .post-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+    
+    .post-date {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+    
+    .post-description {
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    .no-posts-text {
+      font-size: 1.2rem;
+      text-align: center;
+      color: #999;
+      padding: 2rem;
+    }
+    
+  

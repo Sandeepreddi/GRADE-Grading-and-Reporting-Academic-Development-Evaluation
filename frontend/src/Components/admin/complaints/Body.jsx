@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
+import './Complaints.css';
 
 
 function Body() {
@@ -23,7 +24,7 @@ function Body() {
   
     return (
       <div className="complaints-list">
-        <h2>Complaints List</h2>
+        <h3>Complaints List</h3>
         {complaints.length === 0 ? (
           <p>No complaints yet.</p>
         ) : (

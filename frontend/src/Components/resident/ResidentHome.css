@@ -1,8 +1,8 @@
 /* Header */
 .header_img img {
-    width: 170px;
-    height: 40px;
-    border-radius: 10px;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
 }
 
 .column1 {
@@ -14,6 +14,7 @@
 
 .column1 h3 {
     color: #21444c;
+    font-size: 18px; 
 }
 
 .column1 div {
@@ -23,7 +24,7 @@
 
 /* Navigation */
 .Nav_section {
-    width: 25%; /* Set width to 30% of the screen */
+    width: 20%; /* Set width to 30% of the screen */
     gap: 70px;
     color: #21444c; /* Text color */
     font-weight: bold;
@@ -72,8 +73,8 @@
 .button {
     background-color: #1b70bf; /* Coral color */
     color: white;
-    padding: 12px 24px;
-    border-radius: 15px; /* Pill-shaped button */
+    padding: 5px 12px;
+    border-radius: 7px; /* Pill-shaped button */
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
@@ -111,12 +112,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.resident-card.expanded {
-  width: 350px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-  background-color: #f9f9f9;
-}
+
 
 .card-content h3 {
   margin: 0 0 10px;
@@ -163,12 +159,64 @@
 }
 
 .resident-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  column-gap: 50px;
+  align-items: start; /* THIS is important to prevent stretching */
 }
+
 
 .resident-row {
   display: flex;
   justify-content: space-between;
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #ccc;
+}
+
+.filter-buttons button.active {
+  background-color: #4285f4;
+  color: white;
+}
+
+.profile-card h3{
+  font-size: 15px;
+
+}
+.profile-card p{
+  font-size: 13px;
+
+}
+.profile-card input{
+  font-size: 12px;
+  width: 94%;
+
+}
+
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 5px;
+}
+.close-btn {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 18px;
+    padding: 5px;
 }

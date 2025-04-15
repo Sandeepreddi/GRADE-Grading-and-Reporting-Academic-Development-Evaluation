@@ -52,8 +52,11 @@ function Body() {
             <label>Description:</label>
             <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
 
-            <button className="submit-button" onClick={handleSubmit}>Submit</button>
-            <button className="cancel-button" onClick={() => setShowModal(false)}>Cancel</button>
+            <div className="button-group">
+              <button className="req-submit-button" onClick={handleSubmit}>Submit</button>
+              <button className="req-cancel-button" onClick={() => setShowModal(false)}>Cancel</button>
+            </div>
+
           </div>
         </div>
       )}

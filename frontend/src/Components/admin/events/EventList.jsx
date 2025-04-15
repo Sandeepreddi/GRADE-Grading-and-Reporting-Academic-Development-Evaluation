@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./EventsLists.css";
+import { FaTrash } from "react-icons/fa";
 
 const EventsList = () => {
   const [events, setEvents] = useState([]);
@@ -29,6 +30,25 @@ const EventsList = () => {
     fetchEvents();
   }, []);
 
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:8080/api/events/delete/${id}`, {
+        method: "DELETE",
+      });
+  
+      if (response.ok) {
+        alert("Event Deleted Successfully")
+        setEvents(events.filter(event => event.id !== id)); // Remove from state
+
+      } else {
+        console.error("Failed to delete the event");
+      }
+    } catch (error) {
+      console.error("Error deleting the event:", error);
+    }
+  };
+  
+
   // Function to fetch feedbacks for a specific event
   const fetchFeedbacks = async (eventId) => {
     try {
@@ -52,9 +72,11 @@ const EventsList = () => {
   if (error) return <div className="error">Error: {error}</div>;
   
   return (
-    <div className="events-container">
-      <h2 className="events-title">Event List</h2>
-      <div className="events-grid">
+    <div>
+      <h4 className="admin-events-body-h4">Event List</h4>
+      <div className="admin-events-container">
+      
+      <div className="admin-events-grid">
         {events.map(event => (
           <div 
             key={event.id} 
@@ -64,8 +86,22 @@ const EventsList = () => {
               setShowFeedback(false); // Reset feedback visibility when a new event is selected
             }}
           >
-            <h3 className="event-name">{event.name}</h3>
-            <p className="event-date">{event.date}</p>
+            <div className="event-name-date">
+            <div className="event-text">
+              <h4 className="event-name">{event.name}</h4>
+              <p className="admin-event-date">{event.date}</p>
+            </div>
+
+            <FaTrash 
+              style={{ color: "red", cursor: "pointer", fontSize: "22px", marginLeft:"10px" }}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleDelete(event.id);
+              }} 
+            />
+            </div>
+
+
           </div>
         ))}
       </div>
@@ -140,6 +176,7 @@ const EventsList = () => {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 };
