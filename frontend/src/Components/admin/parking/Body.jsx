@@ -4,9 +4,10 @@ import './AdminParking.css';
 const Body = () => {
   const [parkingLots, setParkingLots] = useState(0);
   const [cards, setCards] = useState([]);
-  const [assignCard, setAssignCard] = useState(null); // card currently being assigned
+  const [assignCard, setAssignCard] = useState(null);
   const [flatNo, setFlatNo] = useState("");
   const [block, setBlock] = useState("");
+  const [view, setView] = useState("all"); // all | available | occupied
 
   useEffect(() => {
     fetch("http://localhost:8080/static/get")
@@ -89,6 +90,27 @@ const Body = () => {
 
   return (
     <div className="parking-table-container">
+      <div className="parking-buttons">
+        <button
+          className={`admin-btn-toggle ${view === "all" ? "active" : ""}`}
+          onClick={() => setView("all")}
+        >
+          All
+        </button>
+        <button
+          className={`admin-btn-toggle ${view === "available" ? "active" : ""}`}
+          onClick={() => setView("available")}
+        >
+          Available
+        </button>
+        <button
+          className={`admin-btn-toggle ${view === "occupied" ? "active" : ""}`}
+          onClick={() => setView("occupied")}
+        >
+          Occupied
+        </button>
+      </div>
+
       <table className="parking-table">
         <thead>
           <tr>
@@ -100,35 +122,43 @@ const Body = () => {
           </tr>
         </thead>
         <tbody>
-          {cards.map((card) => (
-            <tr key={card.parkingid}>
-              <td>{card.parkingid}</td>
-              <td className={card.status === "Available" ? "status-available" : "status-assigned"}>
-                {card.status}
-              </td>
-              <td>{card.flatNo || "-"}</td>
-              <td>{card.block || "-"}</td>
-              <td>
-                {card.status === "Available" ? (
-                  <button className="btn btn-assign" onClick={() => openCardForm(card)}>
-                    Assign
-                  </button>
-                ) : (
-                  <>
-                    <button className="btn btn-disabled" disabled>Assigned</button>
-                    <button className="btn btn-reset" onClick={() => handleReset(card.parkingid)}>Reset</button>
-                  </>
-                )}
-              </td>
-            </tr>
-          ))}
+          {cards
+            .filter((card) =>
+              view === "available"
+                ? card.status === "Available"
+                : view === "occupied"
+                ? card.status === "Occupied"
+                : true
+            )
+            .map((card) => (
+              <tr key={card.parkingid}>
+                <td>{card.parkingid}</td>
+                <td className={card.status === "Available" ? "status-available" : "status-assigned"}>
+                  {card.status}
+                </td>
+                <td>{card.flatNo || "-"}</td>
+                <td>{card.block || "-"}</td>
+                <td>
+                  {card.status === "Available" ? (
+                    <button className="btn btn-assign" onClick={() => openCardForm(card)}>
+                      Assign
+                    </button>
+                  ) : (
+                    <>
+                      <button className="btn btn-disabled" disabled>Assigned</button>
+                      <button className="btn btn-reset" onClick={() => handleReset(card.parkingid)}>Reset</button>
+                    </>
+                  )}
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
 
       {assignCard && (
         <div className="card-form-overlay">
           <div className="card-form">
-            <h3>Assign Slot : {assignCard.parkingid}</h3>
+            <h3>Assign Slot: {assignCard.parkingid}</h3>
             <form onSubmit={handleAssign}>
               <input
                 type="text"

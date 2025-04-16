@@ -83,10 +83,10 @@ function Body() {
             <input type="file" accept="image/*" onChange={handleImageUpload} />
             {preview && <img src={preview} alt="Preview" className="preview-img" />}
 
-            <button className="submit-button" onClick={handleSubmit}>
+            <button className="admin-notice-submit-button" onClick={handleSubmit}>
               Submit
             </button>
-            <button className="cancel-button" onClick={() => setShowModal(false)}>
+            <button className="admin-notice-cancel-button" onClick={() => setShowModal(false)}>
               Cancel
             </button>
           </div>

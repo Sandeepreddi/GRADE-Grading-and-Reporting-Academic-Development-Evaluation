@@ -17,7 +17,7 @@ function Body() {
       return;
     }
 
-    const serviceData = { name, address, phone_number: phoneNumber, service, additional_notes: additionalNotes };
+    const serviceData = { name, address, phoneNumber: phoneNumber, service, additionalNotes: additionalNotes };
 
     try {
       const response = await fetch("http://localhost:8080/service/create", {
@@ -42,9 +42,9 @@ function Body() {
   };
 
   return (
-    <div className="body">
-      <h2>Admin Services</h2>
-      <button className="create-button" onClick={() => setShowModal(true)}>Create Service</button>
+    <div className="resident-services-body">
+      <h3>Admin Services</h3>
+      <button className="resident-service-create-button" onClick={() => setShowModal(true)}>Create Service</button>
 
       {showModal && (
   <div className="modal">

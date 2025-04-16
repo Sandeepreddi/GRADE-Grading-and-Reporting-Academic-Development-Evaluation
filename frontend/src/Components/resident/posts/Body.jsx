@@ -22,23 +22,35 @@ function Body() {
     }
   };
   return (
-    <div className="posts-container">
-          <h2 className="post-header">Posts</h2>
-          <div className="posts-grid">
-            {posts.length === 0 ? (
-              <p className="no-posts">No posts available.</p>
-            ) : (
-              posts.map((post) => (
-                <div key={post.id} className="post-item">
-                  <img src={`data:image/jpeg;base64,${post.image}`} alt="Post" className="post-image" />
-                  <h3>{post.name}</h3>
-                  <p>{post.date}</p>
-                  <p>{post.description}</p>
-                </div>
-              ))
-            )}
-          </div>
-        </div>
+    <div className="resident-posts-container">
+          <h3 className="resident-posts-body-h4">Posts</h3>
+          
+          <div className="resident-posts-grid">
+              {posts.length === 0 ? (
+                <p className="no-posts-text">No posts available.</p>
+              ) : (
+                posts.map((post) => (
+                  <div key={post.id} className="resident-post-card">
+                    <div className="resident-post-image-wrapper">
+                      <img
+                        src={`data:image/jpeg;base64,${post.image}`}
+                        alt="Post"
+                        className="resident-post-image"
+                      />
+                      
+                    </div>
+                    <div className="resident-post-content">
+                      <h3 className="resident-post-title">{post.name}</h3>
+                      <p className="resident-post-date">{post.date}</p>
+                      <p className="resident-post-description">{post.description}</p>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+
+        
+    </div>
   );
 }
 

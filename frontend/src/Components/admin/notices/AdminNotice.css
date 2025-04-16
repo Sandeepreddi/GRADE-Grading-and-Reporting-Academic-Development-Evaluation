@@ -91,7 +91,7 @@
     border-radius: 5px;
   }
   
-  .submit-button {
+  .admin-notice-submit-button {
     background-color: #28a745;
     color: white;
     padding: 10px;
@@ -102,11 +102,11 @@
     width: 100%;
   }
   
-  .submit-button:hover {
+  .admin-notice-submit-button:hover {
     background-color: #218838;
   }
   
-  .cancel-button {
+  .admin-notice-cancel-button {
     background-color: #dc3545;
     color: white;
     padding: 10px;

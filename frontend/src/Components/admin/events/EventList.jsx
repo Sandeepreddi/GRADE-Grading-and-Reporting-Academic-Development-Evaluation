@@ -107,7 +107,7 @@ const EventsList = () => {
       </div>
 
       {selectedEvent && (
-        <div className="event-card">
+        <div className="admin-event-card">
           <div className="event-card-content">
             <h2 className="event-card-title">{selectedEvent.name}</h2>
             <p className="event-card-date">{selectedEvent.date}</p>
@@ -115,7 +115,7 @@ const EventsList = () => {
             
             {/* Image container with error handling */}
             {selectedEvent.imageBase64 ? (
-              <div className="event-image-container">
+              <div className="admin-event-image-container">
                 <img 
                   src={`data:image/jpeg;base64,${selectedEvent.imageBase64}`}  
                   alt={`Event: ${selectedEvent.name}`}
@@ -157,7 +157,7 @@ const EventsList = () => {
                   <ul className="feedbacks-list">
                     {feedbacks.map((feedback, index) => (
                       <li key={index} className="feedbacks-item">
-                        <span className="feedbacks-user">{feedback.username}:</span> 
+                        <span className="feedbacks-user">{feedback.user}:</span> 
                         <span className="feedbacks-comment"> {feedback.comment}</span>
                       </li>
                     ))}

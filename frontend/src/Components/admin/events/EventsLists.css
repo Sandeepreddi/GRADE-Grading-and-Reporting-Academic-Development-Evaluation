@@ -71,10 +71,10 @@
   
   
   /* Event Card (Popup) Styling */
-  .event-card {
+  .admin-event-card {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 46%;
     transform: translate(-35%, -50%);
     background: white;
     border-radius: 10px;
@@ -82,7 +82,7 @@
     padding: 20px;
     max-width: 800px;
     width: 90%;
-    max-height: 80vh;
+    max-height: 75vh;
     overflow-y: auto;
     z-index: 1000;
 }
@@ -94,18 +94,21 @@
   .event-card-title {
     margin-top: 0;
     color: #222;
+    font-size: 18px;
   }
   
   .event-card-date {
     color: #555;
+    font-size: 15px;
   }
 
 
 
-  .event-image-container {
+  .admin-event-image-container {
     margin: 1rem 0;
     min-height: 150px;
     display: flex;
+    width : 100%;
     align-items: center;
     justify-content: center;
     background: #f5f5f5;

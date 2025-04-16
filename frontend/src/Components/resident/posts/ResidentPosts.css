@@ -1,60 +1,82 @@
-.posts-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
+.resident-posts-container{
+  width: 80%;
+
+}
+.resident-posts-body-h4 {
+  align-items: center;
+  color: #333;
+  font-size: 22px;
+  margin-bottom: 10px;
+  padding: 10px; 
 }
 
-.post-header{
+.resident-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns with equal width */
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.no-posts-text {
+  font-size: 1.2rem;
   text-align: center;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    font-size: 2rem;
+  color: #999;
+  padding: 2rem;
 }
 
-.create-post-btn {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .post-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-  }
-  
-  .post-form input,
-  .post-form textarea {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .post-form button {
-    padding: 8px 12px;
-    cursor: pointer;
-  }
-  
-  .post-form button:first-of-type {
-    background-color: green;
-    color: white;
-  }
-  
-  .post-form button:last-of-type {
-    background-color: red;
-    color: white;
-  }
+.resident-post-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+  position: relative;
+}
 
-  .no-posts{
-    text-align: center;
-    grid-column: 1 / -1;
-    color: #7f8c8d;
-    font-style: italic;
-  }
-  
+.resident-post-card:hover {
+  transform: translateY(-4px);
+}
+.resident-post-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.resident-post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resident-post-content {
+  padding: 1rem;
+}
+
+.resident-post-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.resident-post-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.resident-post-description {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+

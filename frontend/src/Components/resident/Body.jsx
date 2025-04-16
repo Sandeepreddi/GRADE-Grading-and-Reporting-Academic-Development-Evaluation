@@ -53,8 +53,8 @@ function Body() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className="card-body">
-      <h1>Resident Dashboard</h1>
+    <div className="resident-card-body">
+      <h4>Resident Dashboard</h4>
 
       {/* Filter Buttons */}
       <div className="filter-buttons">

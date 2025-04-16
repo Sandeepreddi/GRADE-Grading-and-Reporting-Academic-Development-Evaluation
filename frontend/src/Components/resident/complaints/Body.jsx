@@ -35,9 +35,9 @@ function Body() {
   };
 
   return (
-    <div className="body">
-      <h2>Resident Complaints</h2>
-      <button className="create-button" onClick={() => setShowModal(true)}>
+    <div className="resident-complaints-body">
+      <h3>Resident Complaints</h3>
+      <button className="resident-complaint-create-button" onClick={() => setShowModal(true)}>
         Create Complaint
       </button>
 

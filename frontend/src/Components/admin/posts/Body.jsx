@@ -51,34 +51,43 @@ function Body() {
         Create Post
       </button>
       
-      <DisplayPosts></DisplayPosts>
+      
 
       {showForm && (
-        <form className="post-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            required
-          />
-          <textarea
-            placeholder="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            required
-          ></textarea>
-          <input type="file" accept="image/*" onChange={handleImageChange} required />
-          <button type="submit">Submit</button>
-          <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
-        </form>
-      )}
+  <div className="admin-post-overlay">
+    <form className="admin-post-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+      />
+      <input
+        type="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+        required
+      />
+      <textarea
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        required
+      ></textarea>
+      <input
+        type="file"
+        accept="image/*"
+        onChange={handleImageChange}
+        required
+      />
+      <button type="submit">Submit</button>
+      <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
+    </form>
+  </div>
+)}
+
+      <DisplayPosts></DisplayPosts>
     </div>
   );
 }

@@ -1,3 +1,15 @@
+.resident-card-body {
+  align-items: center;
+  color: #333;
+  }
+  
+  .resident-card-body {
+    margin: 0;
+    padding: 0;
+    
+  font-size: 22px;
+  }
+
 /* Header */
 .header_img img {
     width: 120px;
@@ -116,16 +128,17 @@
 
 .card-content h3 {
   margin: 0 0 10px;
-  font-size: 1.2rem;
+  font-size: 18px;
 }
 
 .main-info p {
     display: flex;
     margin: 5px 0;
     align-items: center;
-    font-size: 1rem; /* Adjust font size */
+    font-size: 16px; /* Adjust font size */
     gap: 6px;
 }
+
 
 .additional-details {
   margin-top: 15px;
@@ -137,7 +150,7 @@
 .additional-details h4 {
   margin: 15px 0 10px 0;
   color: #555;
-  font-size: 1.1em;
+  font-size: 18px;
   border-bottom: 1px solid #eee;
   padding-bottom: 5px;
 }
@@ -146,7 +159,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 8px 0;
+  margin: 8px 0;font-size: 16px;
 }
 
 .additional-details svg {
